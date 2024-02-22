@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GOT</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <section id="seleccionar-personaje">
+            <h1 class="titulo">GAME OF THRONES!🐉⚔️🏰👑🐺🦁</h1>
+
+            <h2 id="subtitulo1" class="subtitulo">Elige tu personaje</h2>
+
+            <div id="contenedor-tarjetas" class="tarjetas"></div>
+
+            <button id="boton-personaje">JUGAR!</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 id="subtitulo2" class="subtitulo"></h2>
+            <canvas id="mapa"></canvas>
+                <button ontouchstart="moverArriba()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">⬆️</button>
+                <div>
+                    <button ontouchstart="moverIzquierda()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">⬅️</button>
+                    <button ontouchstart="moverAbajo()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">⬇️</button>
+                    <button ontouchstart="moverDerecha()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">➡️</button>
+                 </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">GAME OF THRONES!🐉⚔️🏰👑🐺🦁</h1>
+
+            <h2 id="subtitulo3" class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="contenedor-ataques" class="ataques"></div>
+
+            <div id="mensajes">
+                <p id="resultado">Suerte en tu pelea</p>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Volver a jugar</button>
+                </section>
+            </div>      
+
+            <div class="combate">
+                <div class="tarjetas-ataques">
+                    <p id="victorias-jugador">0</p>
+                    <p id="personaje-jugador"></p>
+                    <div id="ataques-jugador"></div>
+                </div>
+                <div class="tarjetas-ataques">
+                    <p id="victorias-enemigo">0</p>
+                    <p id="personaje-enemigo"></p>
+                    <div id="ataques-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./js/personaje.js"></script>
+    </body>
+</html>
