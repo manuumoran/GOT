@@ -209,7 +209,7 @@ function iniciarJuego() {
 }
 
 function unirseAlJuego() {
-    fetch("${process.env.NEXT_PUBLIC_SITE_URL}/unirse")
+    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/unirse`)
         .then(function (res) {
             if (res.ok) {
                 res.text()
