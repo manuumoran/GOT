@@ -209,7 +209,7 @@ function iniciarJuego() {
 }
 
 function unirseAlJuego() {
-    fetch("http://192.168.0.28:8080/unirse")
+    fetch("${process.env.NEXT_PUBLIC_SITE_URL}/unirse")
         .then(function (res) {
             if (res.ok) {
                 res.text()
@@ -257,7 +257,7 @@ function seleccionarPersonajeJugador() {
 }
 
 function seleccionarPersonaje(personajeJugador) {
-    fetch(`http://192.168.0.28:8080/personaje/${jugadorId}`, {
+    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -318,7 +318,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques(){
-    fetch(`http://192.168.0.28:8080/personaje/${jugadorId}/ataques`, {
+    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -332,7 +332,7 @@ function enviarAtaques(){
 }
 
 function obtenerAtaques() {
-    fetch(`http://192.168.0.28:8080/personaje/${enemigoId}/ataques`)
+    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${enemigoId}/ataques`)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -468,7 +468,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`http://192.168.0.28:8080/personaje/${jugadorId}/posicion`, {
+    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
