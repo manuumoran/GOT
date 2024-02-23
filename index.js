@@ -37,7 +37,7 @@ class Personaje {
     }
 }
 
-app.get('/unirse', (req, res) =>{
+app.get("/unirse", (req, res) =>{
     const id = `${Math.random()}`
     
     const jugador = new Jugador(id)

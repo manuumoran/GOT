@@ -209,7 +209,7 @@ function iniciarJuego() {
 }
 
 function unirseAlJuego() {
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/unirse`)
+    fetch(`https://got-ebon.vercel.app/unirse`)
         .then(function (res) {
             if (res.ok) {
                 res.text()
@@ -257,7 +257,7 @@ function seleccionarPersonajeJugador() {
 }
 
 function seleccionarPersonaje(personajeJugador) {
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${jugadorId}`, {
+    fetch(`https://got-ebon.vercel.app/personaje/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -318,7 +318,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques(){
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${jugadorId}/ataques`, {
+    fetch(`https://got-ebon.vercel.app/personaje/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -332,7 +332,7 @@ function enviarAtaques(){
 }
 
 function obtenerAtaques() {
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${enemigoId}/ataques`)
+    fetch(`https://got-ebon.vercel.app/personaje/${enemigoId}/ataques`)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -468,7 +468,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/personaje/${jugadorId}/posicion`, {
+    fetch(`https://got-ebon.vercel.app/personaje/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
